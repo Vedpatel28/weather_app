@@ -19,6 +19,8 @@ for users to stay informed about weather conditions in their desired locations.
 <img src = "" height = "350"> </img>
 <img src = "" height = "350"> </img>
 
+https://github.com/Vedpatel28/weather_app/assets/130833918/eadef7fd-88ef-4921-bb74-7d747e3ba9d1
+
 ## Project Objectives:
 
 ### API Calling: 
