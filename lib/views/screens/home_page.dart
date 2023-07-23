@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_app/controllers/date_time_controller.dart';
 import 'package:weather_app/controllers/weather_api_controller.dart';
+import 'package:weather_app/utilse/routes_utilse.dart';
 
 class home_page extends StatelessWidget {
   home_page({super.key});
@@ -35,11 +36,13 @@ class home_page extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: const Icon(Icons.add, color: Colors.transparent),
         title: Text(
           "Weathers",
           style: GoogleFonts.wendyOne(),
         ),
         backgroundColor: Colors.transparent,
+        centerTitle: true,
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -60,7 +63,7 @@ class home_page extends StatelessWidget {
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   ConnectivityResult result =
-                  snapshot.hasData as ConnectivityResult;
+                      snapshot.hasData as ConnectivityResult;
                   switch (result) {
                     case ConnectivityResult.mobile:
                       return Padding(
@@ -80,7 +83,8 @@ class home_page extends StatelessWidget {
                                       },
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                         hintText: 'Search',
                                         suffixIcon: IconButton(
@@ -108,18 +112,19 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           // date Time
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
                                                 "${data['name']}",
@@ -154,7 +159,7 @@ class home_page extends StatelessWidget {
                                           // temp / icons
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                                MainAxisAlignment.spaceAround,
                                             children: [
                                               Container(
                                                 height: s.height * 0.08,
@@ -193,17 +198,18 @@ class home_page extends StatelessWidget {
                                           // Highest / Lowest temp
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Highest   ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -212,7 +218,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -224,7 +230,8 @@ class home_page extends StatelessWidget {
                                                     "Lowest  ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -233,7 +240,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -248,33 +255,36 @@ class home_page extends StatelessWidget {
                                     // Second Three Container
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                       ],
@@ -294,7 +304,8 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
@@ -324,7 +335,8 @@ class home_page extends StatelessWidget {
                                       },
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                         hintText: 'Search',
                                         suffixIcon: IconButton(
@@ -352,18 +364,19 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           // date Time
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
                                                 "${data['name']}",
@@ -398,7 +411,7 @@ class home_page extends StatelessWidget {
                                           // temp / icons
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                                MainAxisAlignment.spaceAround,
                                             children: [
                                               Container(
                                                 height: s.height * 0.08,
@@ -437,17 +450,18 @@ class home_page extends StatelessWidget {
                                           // Highest / Lowest temp
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Highest   ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -456,7 +470,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -468,7 +482,8 @@ class home_page extends StatelessWidget {
                                                     "Lowest  ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -477,7 +492,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -492,33 +507,36 @@ class home_page extends StatelessWidget {
                                     // Second Three Container
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                       ],
@@ -538,7 +556,8 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
@@ -568,7 +587,8 @@ class home_page extends StatelessWidget {
                                       },
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                         hintText: 'Search',
                                         suffixIcon: IconButton(
@@ -596,18 +616,19 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           // date Time
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
                                                 "${data['name']}",
@@ -642,7 +663,7 @@ class home_page extends StatelessWidget {
                                           // temp / icons
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                                MainAxisAlignment.spaceAround,
                                             children: [
                                               Container(
                                                 height: s.height * 0.08,
@@ -681,17 +702,18 @@ class home_page extends StatelessWidget {
                                           // Highest / Lowest temp
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Highest   ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -700,7 +722,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -712,7 +734,8 @@ class home_page extends StatelessWidget {
                                                     "Lowest  ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -721,7 +744,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -736,33 +759,36 @@ class home_page extends StatelessWidget {
                                     // Second Three Container
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                       ],
@@ -782,7 +808,8 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
@@ -812,7 +839,8 @@ class home_page extends StatelessWidget {
                                       },
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                         hintText: 'Search',
                                         suffixIcon: IconButton(
@@ -840,18 +868,19 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           // date Time
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
                                                 "${data['name']}",
@@ -886,7 +915,7 @@ class home_page extends StatelessWidget {
                                           // temp / icons
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                                MainAxisAlignment.spaceAround,
                                             children: [
                                               Container(
                                                 height: s.height * 0.08,
@@ -925,17 +954,18 @@ class home_page extends StatelessWidget {
                                           // Highest / Lowest temp
                                           Row(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                    MainAxisAlignment.center,
                                                 children: [
                                                   Text(
                                                     "Highest   ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -944,7 +974,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -956,7 +986,8 @@ class home_page extends StatelessWidget {
                                                     "Lowest  ",
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
-                                                        fontSize: s.height * 0.02,
+                                                        fontSize:
+                                                            s.height * 0.02,
                                                       ),
                                                     ),
                                                   ),
@@ -965,7 +996,7 @@ class home_page extends StatelessWidget {
                                                     style: GoogleFonts.wendyOne(
                                                       textStyle: TextStyle(
                                                         fontSize:
-                                                        s.height * 0.025,
+                                                            s.height * 0.025,
                                                       ),
                                                     ),
                                                   ),
@@ -980,33 +1011,36 @@ class home_page extends StatelessWidget {
                                     // Second Three Container
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         Container(
                                           height: s.height * 0.22,
                                           width: s.width * 0.3,
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.4),
+                                            color:
+                                                Colors.white.withOpacity(0.4),
                                             borderRadius:
-                                            BorderRadius.circular(12),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                       ],
@@ -1026,7 +1060,8 @@ class home_page extends StatelessWidget {
                                             blurRadius: 3,
                                             spreadRadius: 2,
                                             blurStyle: BlurStyle.outer,
-                                            color: Colors.white.withOpacity(0.3),
+                                            color:
+                                                Colors.white.withOpacity(0.3),
                                           ),
                                         ],
                                       ),
@@ -1090,13 +1125,12 @@ class home_page extends StatelessWidget {
                                     ],
                                   ),
                                   child: Column(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       // date Time
                                       Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
                                             "${data['name']}",
@@ -1107,7 +1141,7 @@ class home_page extends StatelessWidget {
                                             ),
                                           ),
                                           Text(
-                                            "${months[Provider.of<dateTimeController>(context).mon - 1]} ${Provider.of<dateTimeController>(context).mon}",
+                                            "${months[Provider.of<dateTimeController>(context).mon - 1]} ${Provider.of<dateTimeController>(context).date}",
                                             style: GoogleFonts.wendyOne(
                                               textStyle: TextStyle(
                                                 fontSize: s.height * 0.025,
@@ -1131,7 +1165,7 @@ class home_page extends StatelessWidget {
                                       // temp / icons
                                       Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
+                                            MainAxisAlignment.spaceAround,
                                         children: [
                                           Container(
                                             height: s.height * 0.08,
@@ -1170,11 +1204,11 @@ class home_page extends StatelessWidget {
                                       // Highest / Lowest temp
                                       Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           Column(
                                             mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                                MainAxisAlignment.center,
                                             children: [
                                               Text(
                                                 "Highest   ",
@@ -1188,8 +1222,7 @@ class home_page extends StatelessWidget {
                                                 "${data['main']['temp_max']} °",
                                                 style: GoogleFonts.wendyOne(
                                                   textStyle: TextStyle(
-                                                    fontSize:
-                                                    s.height * 0.025,
+                                                    fontSize: s.height * 0.025,
                                                   ),
                                                 ),
                                               ),
@@ -1209,8 +1242,7 @@ class home_page extends StatelessWidget {
                                                 "${data['main']['temp_min']} °",
                                                 style: GoogleFonts.wendyOne(
                                                   textStyle: TextStyle(
-                                                    fontSize:
-                                                    s.height * 0.025,
+                                                    fontSize: s.height * 0.025,
                                                   ),
                                                 ),
                                               ),
@@ -1222,36 +1254,108 @@ class home_page extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(height: s.height * 0.02),
-                                // Second Three Container
+                                // Second Container
                                 Row(
                                   mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                       height: s.height * 0.22,
-                                      width: s.width * 0.3,
+                                      width: s.width * 0.932,
+                                      padding: const EdgeInsets.all(12),
                                       decoration: BoxDecoration(
                                         color: Colors.white.withOpacity(0.4),
-                                        borderRadius:
-                                        BorderRadius.circular(12),
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
-                                    ),
-                                    Container(
-                                      height: s.height * 0.22,
-                                      width: s.width * 0.3,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white.withOpacity(0.4),
-                                        borderRadius:
-                                        BorderRadius.circular(12),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: s.height * 0.22,
-                                      width: s.width * 0.3,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white.withOpacity(0.4),
-                                        borderRadius:
-                                        BorderRadius.circular(12),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "Country : ${data['sys']['country']}..",
+                                            style: GoogleFonts.wendyOne(
+                                              textStyle: TextStyle(
+                                                fontSize: s.height * 0.022,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: s.height * 0.02,
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Container(
+                                                height: s.height * 0.06,
+                                                width: s.width * 0.1,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: NetworkImage(
+                                                      "https://cdn-icons-png.flaticon.com/512/6368/6368753.png",
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                "${data['main']['feels_like']}",
+                                                style: GoogleFonts.wendyOne(),
+                                              ),
+                                              Container(
+                                                height: s.height * 0.06,
+                                                width: s.width * 0.1,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: NetworkImage(
+                                                      "https://cdn-icons-png.flaticon.com/512/1779/1779940.png",
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                "${data['weather'][0]['main']}",
+                                                style: GoogleFonts.wendyOne(),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(height: s.height * 0.01),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Container(
+                                                height: s.height * 0.06,
+                                                width: s.width * 0.1,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: NetworkImage(
+                                                      "https://forums.synfig.org/uploads/default/original/2X/3/31d749625faa93271be23874d416f9be755b7cb9.gif",
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                "${data['weather'][0]['description']}",
+                                                style: GoogleFonts.wendyOne(),
+                                              ),
+                                              Container(
+                                                height: s.height * 0.06,
+                                                width: s.width * 0.1,
+                                                decoration: const BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: NetworkImage(
+                                                      "https://www.shareicon.net/data/512x512/2017/04/19/884240_weather_512x512.png",
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                "${data['main']['humidity']}",
+                                                style: GoogleFonts.wendyOne(),
+                                              )
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
@@ -1272,6 +1376,42 @@ class home_page extends StatelessWidget {
                                         spreadRadius: 2,
                                         blurStyle: BlurStyle.outer,
                                         color: Colors.white.withOpacity(0.3),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      IconButton(
+                                        onPressed: () {
+                                          Navigator.of(context)
+                                              .pushNamed(AllRoutes.homePage);
+                                        },
+                                        icon: const Icon(
+                                          Icons.home,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      IconButton(
+                                        onPressed: () {
+                                          Navigator.of(context)
+                                              .pushNamed(AllRoutes.historyPage);
+                                        },
+                                        icon: const Icon(
+                                          Icons.history,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      IconButton(
+                                        onPressed: () {
+                                          Navigator.of(context)
+                                              .pushNamed(AllRoutes.likePage);
+                                        },
+                                        icon: const Icon(
+                                          Icons.bookmark_add_outlined,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ],
                                   ),

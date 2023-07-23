@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weather_app/controllers/helpers/api_helper_class.dart';
 
 class ApiController extends ChangeNotifier {
   Map data = {};
 
-  ApiController() {
+  SharedPreferences sharedPreferences;
+
+  List likePage = [];
+  List historyPage = [];
+
+  ApiController({required this.sharedPreferences}) {
     weather();
   }
 

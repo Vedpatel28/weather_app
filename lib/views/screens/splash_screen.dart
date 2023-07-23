@@ -41,7 +41,7 @@ class splash_Screen extends StatelessWidget {
               "Welcome To Weather App",
               style: GoogleFonts.wendyOne(
                 textStyle: TextStyle(
-                  fontSize: s.height * 0.03,
+                  fontSize: s.height * 0.028,
                   shadows: const [
                     Shadow(
                       color: Colors.black54,
