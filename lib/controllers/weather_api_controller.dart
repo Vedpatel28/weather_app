@@ -5,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weather_app/controllers/helpers/api_helper_class.dart';
 import 'package:weather_app/modal/history_model.dart';
 import 'package:weather_app/modal/like_modal.dart';
-import 'package:weather_app/views/screens/like_page.dart';
 
 class ApiController extends ChangeNotifier {
   Map data = {};
