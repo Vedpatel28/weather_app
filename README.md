@@ -15,7 +15,9 @@ for users to stay informed about weather conditions in their desired locations.
 
 ## Screens/views :
 
-<img src = "" height = "300"> </img>
+<img src = "" height = "350"> </img>
+<img src = "" height = "350"> </img>
+<img src = "" height = "350"> </img>
 
 ## Project Objectives:
 
