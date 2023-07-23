@@ -1,34 +1,34 @@
 // ignore_for_file: non_constant_identifier_names
 
 class Weather {
-  final double temp;
-  final double temp_Min;
-  final double temp_Max;
-  final String cityName;
-  final String countryName;
-  final String description;
-  final String main;
-  final String rain;
-  final List<Map<String, dynamic>> weather;
-  final double wind;
-  final int humidity;
-  final double feelsLike;
-  final int pressure;
+  late double? temp;
+  late double? temp_Min;
+  late double? temp_Max;
+  late String? cityName;
+  late String? countryName;
+  late String? description;
+  late String? main;
+  late String? rain;
+  late List<Map<String, dynamic>>? weather;
+  late double? wind;
+  late int? humidity;
+  late double? feelsLike;
+  late int? pressure;
 
   Weather({
-    required this.cityName,
-    required this.weather,
-    required this.temp_Max,
-    required this.temp_Min,
-    required this.countryName,
-    required this.description,
-    required this.main,
-    required this.rain,
-    required this.feelsLike,
-    required this.humidity,
-    required this.pressure,
-    required this.temp,
-    required this.wind,
+    this.cityName,
+    this.weather,
+    this.temp_Max,
+    this.temp_Min,
+    this.countryName,
+    this.description,
+    this.main,
+    this.rain,
+    this.feelsLike,
+    this.humidity,
+    this.pressure,
+    this.temp,
+    this.wind,
   });
 
   factory Weather.fromMap({required Map data}) {

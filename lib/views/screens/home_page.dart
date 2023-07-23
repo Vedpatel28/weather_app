@@ -1088,6 +1088,8 @@ class home_page extends StatelessWidget {
                                 // Search City
                                 TextField(
                                   onSubmitted: (value) {
+                                    provider.addHistory(search: value);
+                                    // provider.addSearch(search: value);
                                     provider.weather(val: value);
                                   },
                                   decoration: InputDecoration(
@@ -1180,7 +1182,7 @@ class home_page extends StatelessWidget {
                                           ),
                                           SizedBox(width: s.width * 0.02),
                                           Text(
-                                            "   ${data['main']['temp']} °",
+                                            "   ${data['main']['temp'] - 275} °".substring(0,5),
                                             style: GoogleFonts.wendyOne(
                                               textStyle: TextStyle(
                                                 fontSize: s.height * 0.025,
@@ -1219,7 +1221,8 @@ class home_page extends StatelessWidget {
                                                 ),
                                               ),
                                               Text(
-                                                "${data['main']['temp_max']} °",
+                                                "${data['main']['temp_max'] - 275} °"
+                                                    .substring(0, 5),
                                                 style: GoogleFonts.wendyOne(
                                                   textStyle: TextStyle(
                                                     fontSize: s.height * 0.025,
@@ -1239,7 +1242,7 @@ class home_page extends StatelessWidget {
                                                 ),
                                               ),
                                               Text(
-                                                "${data['main']['temp_min']} °",
+                                                "${data['main']['temp_min']- 275} °".substring(0,5),
                                                 style: GoogleFonts.wendyOne(
                                                   textStyle: TextStyle(
                                                     fontSize: s.height * 0.025,
@@ -1298,7 +1301,7 @@ class home_page extends StatelessWidget {
                                                 ),
                                               ),
                                               Text(
-                                                "${data['main']['feels_like']}",
+                                                "${data['main']['feels_like']- 275}".substring(0,5),
                                                 style: GoogleFonts.wendyOne(),
                                               ),
                                               Container(
@@ -1405,6 +1408,11 @@ class home_page extends StatelessWidget {
                                       ),
                                       IconButton(
                                         onPressed: () {
+                                          provider.addLikedTemp(
+                                            temp: data['main']['temp'],
+                                            tempMin: data['main']['temp_min'],
+                                            tempMax: data['main']['temp_max'],
+                                          );
                                           Navigator.of(context)
                                               .pushNamed(AllRoutes.likePage);
                                         },
