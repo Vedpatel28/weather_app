@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/controllers/date_time_controller.dart';
 import 'package:weather_app/controllers/weather_api_controller.dart';
 import 'package:weather_app/utilse/routes_utilse.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,9 @@ void main() {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ApiController(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => dateTimeController(),
         ),
       ],
       child: const MyApp(),
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        AllRoutes.homePage: (context) => const home_page(),
+        AllRoutes.homePage: (context) => home_page(),
       },
     );
   }
