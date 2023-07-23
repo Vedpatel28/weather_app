@@ -10,9 +10,8 @@ information for cities, states, and countries.
 "Sky Scrapper" aims to be a reliable and user-friendly weather application, empowering users
 with accurate and timely weather information. By incorporating API calling, Shared Preferences,
 network connectivity checks, city/state/country-wise weather details, saved location
-functionality, light and dark themes, splash screen, and detailed weather screens, the app
-provides a comprehensive solution for users to stay informed about weather conditions in their
-desired locations.
+functionality, splash screen, and detailed weather screens, the app provides a comprehensive solution 
+for users to stay informed about weather conditions in their desired locations.
 
 ## Screens/views :
 
@@ -42,11 +41,6 @@ Users can search for weather details by
 entering the name of a city, state, or country. The app retrieves the relevant weather information
 and displays it in an organized and user-friendly manner, including temperature, humidity, wind
 speed, and other relevant meteorological data.
-
-### Light & Dark Themes: "Sky Scrapper" offers a visually pleasing experience with customizable
-themes. Users can switch between light and dark themes based on their preferences, ensuring
-comfortable usage in different lighting conditions and personalizing their weather app
-experience.
 
 ### Splash Screen: The app features an appealing splash screen that creates a positive first
 impression on users. The splash screen can showcase the app logo, weather-related imagery, or a
