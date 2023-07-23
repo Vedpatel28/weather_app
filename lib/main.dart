@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:weather_app/controllers/date_time_controller.dart';
 import 'package:weather_app/controllers/weather_api_controller.dart';
 import 'package:weather_app/utilse/routes_utilse.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_app/views/screens/home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => ApiController(),
+          create: (context) => ApiController(preferences: preferences),
         ),
         ChangeNotifierProvider(
           create: (context) => dateTimeController(),

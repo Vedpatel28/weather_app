@@ -88,7 +88,7 @@ class home_page extends StatelessWidget {
                         SizedBox(height: s.height * 0.02),
                         // First Container
                         Container(
-                          height: s.height * 0.4,
+                          height: s.height * 0.38,
                           width: s.width,
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
