@@ -21,6 +21,6 @@ class dateTimeController extends ChangeNotifier {
 
   int mon = DateTime.now().month;
   int date = DateTime.now().day;
-  int hour = DateTime.now().hour;
+  int hour = DateTime.now().hour ;
   int minute = DateTime.now().minute;
 }

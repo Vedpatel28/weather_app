@@ -23,10 +23,13 @@ class ApiController extends ChangeNotifier {
 
   List<String> _allSearch = [];
 
-  List<LikedModal> likedTemp = [];
+  List likedTemp = [];
+  List likedName = [];
+  List likedTimeMin = [];
+  List likedTimeHou = [];
   List<HistoryModal> historySearch = [];
 
-  List<LikedModal> get getWeather {
+  List get getWeather {
     _allTemp = sharedPreferences.getStringList(_sfTemp) ?? [];
     _allTempMin = sharedPreferences.getStringList(_sfTemp_Min) ?? [];
     _allTempMax = sharedPreferences.getStringList(_sfTemp_Max) ?? [];
@@ -93,8 +96,23 @@ class ApiController extends ChangeNotifier {
     return 0;
   }
 
-  addHistory({required String search}) {
-    listOfHistory.add(search);
+  Saved({
+    required double temp,
+    required String name,
+    // required DateTime currentTimeMin,
+    // required DateTime currentTimeHor,
+  }) {
+    likedTemp.add(temp);
+    likedName.add(name);
+    // likedTimeMin.add(currentTimeMin);
+    // likedTimeHou.add(currentTimeHor);
+
     notifyListeners();
   }
+
+//
+// addHistory({required String search}) {
+//   listOfHistory.add(search);
+//   notifyListeners();
+// }
 }

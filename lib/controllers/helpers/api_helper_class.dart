@@ -16,10 +16,6 @@ class ApiHelpers {
     if (response.statusCode == 200) {
       var weather = jsonDecode(response.body);
 
-      // Map allWeather = weather['main'];
-
-      print("===== $weather =====");
-
       return weather;
     }
   }
