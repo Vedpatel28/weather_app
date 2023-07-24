@@ -19,7 +19,7 @@ for users to stay informed about weather conditions in their desired locations.
 <img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/3fa96865-4753-4bc0-946f-385bba3da97c" height = "350"> </img>
 <img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/db779900-6c0f-45ca-a10b-39bcb9a05f4d" height = "350"> </img>
 <img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/66683f90-d795-44d3-a6e1-f561aba2bda1" height = "350"> </img>
-<img src = "" height = "350"> </img>
+<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/54583729-7234-4bb8-888f-4a847b3f148b" height = "350"> </img>
 
 https://github.com/Vedpatel28/weather_app/assets/130833918/eadef7fd-88ef-4921-bb74-7d747e3ba9d1
 
