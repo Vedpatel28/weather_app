@@ -10,11 +10,11 @@ class splash_Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size s = MediaQuery.of(context).size;
     Timer.periodic(const Duration(seconds: 4), (timer) {
       Navigator.of(context).pushReplacementNamed(AllRoutes.homePage);
       timer.cancel();
     });
-    Size s = MediaQuery.of(context).size;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(12),

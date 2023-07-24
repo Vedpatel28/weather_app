@@ -39,6 +39,7 @@ dependencies:
   http:
   google_fonts:
   shared_preferences:
+  glassmorphism: ^3.0.0
   connectivity_plus:
 
 dev_dependencies:

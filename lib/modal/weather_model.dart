@@ -45,7 +45,7 @@ class Weather {
       temp_Min: data['main']['temp_min'],
       temp_Max: data['main']['temp_max'],
       wind: data['wind']['speed'],
-      weather: data['weather']['description'],
+      weather: data['weather'][0]['description'],
     );
   }
 }

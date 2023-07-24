@@ -28,7 +28,6 @@ class history_page extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Consumer<ApiController>(
           builder: (context, provider, _) {
-            Map data = provider.data;
             return Column(
               children: [
                 Container(
@@ -54,8 +53,7 @@ class history_page extends StatelessWidget {
                         ),
                         trailing: IconButton(
                           onPressed: () {
-                            provider.weather(
-                                val: provider.listOfHistory[index]);
+                            provider.weather(val: provider.listOfHistory[index]);
                             Navigator.of(context).pushNamed(AllRoutes.homePage);
                           },
                           icon: const Icon(Icons.arrow_forward_ios_outlined),
