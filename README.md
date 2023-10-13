@@ -15,15 +15,7 @@ for users to stay informed about weather conditions in their desired locations.
 
 ## Screens/views :
 
-https://github.com/Vedpatel28/weather_app/assets/130833918/2f0e5816-ebb8-40d2-acaf-d94a23f35575
-
-<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/e1f38abd-8029-48b0-b526-20904d90295f" height = "350"> </img>
-<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/3fa96865-4753-4bc0-946f-385bba3da97c" height = "350"> </img>
-<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/db779900-6c0f-45ca-a10b-39bcb9a05f4d" height = "350"> </img>
-<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/66683f90-d795-44d3-a6e1-f561aba2bda1" height = "350"> </img>
-<img src = "https://github.com/Vedpatel28/weather_app/assets/130833918/54583729-7234-4bb8-888f-4a847b3f148b" height = "350"> </img>
-
-https://github.com/Vedpatel28/weather_app/assets/130833918/eadef7fd-88ef-4921-bb74-7d747e3ba9d1
+https://github.com/Vedpatel28/weather_app/assets/130833918/c08ca586-1ac8-4b6a-a941-17374504a340
 
 ## Project Objectives:
 
